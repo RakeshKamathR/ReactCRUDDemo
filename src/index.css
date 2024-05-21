@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional additional styles */
+.container {
+  @apply max-w-7xl mx-auto;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+/* index.css */
+
+input:checked ~ span {
+  background-color: #4a5568;
+}
+/* index.css */
+
+/* Switch styles */
+input:checked ~ span {
+  background-color: #4a5568;
+}
+
+input:checked ~ input {
+  transform: translateX(100%);
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+label span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.2s;
+}
+
+label span::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: #2196f3;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  transform: translateX(0);
+}
+
+input:checked + span::before {
+  transform: translateX(1.25rem);
+}
+
+input + span {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+input:checked + span {
+  background-color: #2196f3;
+}
