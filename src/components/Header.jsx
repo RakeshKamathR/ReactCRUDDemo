@@ -25,7 +25,7 @@ const Header = () => {
     theme === "light" ? "/switch-dark.png" : "/switch-light.png";
   return (
     <header className="bg-white dark:bg-gray-800 shadow-md">
-      <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold text-gray-900 dark:text-white">
           <NavLink to="/">MYAPP</NavLink>
         </div>
